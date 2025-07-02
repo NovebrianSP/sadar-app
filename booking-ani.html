@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Dr. Ani Sulistyani - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/booking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <!-- Header -->
+        <header class="booking-header glass-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                    </button>
+                    <h1 class="page-title">Booking</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn">
+                        <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="booking-main">
+            <!-- Doctor Profile Card -->
+            <section class="doctor-profile-section">
+                <div class="doctor-profile-card glass-card">
+                    <!-- Doctor Photo -->
+                    <div class="doctor-photo-container">
+                        <img src="assets/Image/Dokter.png" alt="Dr. Ani Sulistyani" class="doctor-photo">
+                    </div>
+
+                    <!-- Doctor Info Card -->
+                    <div class="doctor-info-card">
+                        <div class="doctor-header">
+                            <h2 class="doctor-name">dr Ani Sulistyani</h2>
+                            <span class="doctor-license">IDR20</span>
+                        </div>
+
+                        <div class="doctor-location">
+                            <img src="assets/Icon/location icon.png" alt="Location" class="location-icon">
+                            <span class="location-text">Yogyakarta</span>
+                        </div>
+
+                        <div class="doctor-rating">
+                            <span class="rating-value">⭐ 4.9</span>
+                        </div>
+
+                        <div class="doctor-info-section">
+                            <h3 class="info-title">Information</h3>
+                            <p class="doctor-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Nunc imperdiet, velit non lobortis rutrum, dapibus felis 
+                                malesuada felis, eliquet hendrerit risus magna in tellus. 
+                                Curabitur congue vitae pem nec vestibulum. Nullam 
+                                lacinia est vitae ipsum ultrices commodo.
+                            </p>
+                        </div>
+
+                        <!-- Booking Button -->
+                        <button class="booking-action-btn" onclick="handleBooking('ani')">
+                            <span>Booking</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jadwal Section -->
+            <section class="schedule-section">
+                <div class="schedule-card glass-card">
+                    <h3 class="schedule-title">Jadwal Tersedia</h3>
+                    <div class="time-slots">
+                        <button class="time-slot" data-time="09:00">09:00</button>
+                        <button class="time-slot" data-time="10:30">10:30</button>
+                        <button class="time-slot" data-time="13:00">13:00</button>
+                        <button class="time-slot" data-time="14:30">14:30</button>
+                        <button class="time-slot" data-time="16:00">16:00</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item active">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container" id="themeToggleContainer">
+            <button id="themeToggle" class="theme-toggle-btn" onclick="toggleTheme()">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button id="toggleVisibility" class="visibility-toggle-btn" onclick="toggleThemeVisibility()">
+                <span class="visibility-icon">👁️</span>
+            </button>
+        </div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/booking.js"></script>
+</body>
+</html>

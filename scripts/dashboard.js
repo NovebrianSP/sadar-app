@@ -92,7 +92,42 @@ function initializeQuickActions() {
                 this.style.transform = '';
             }, 150);
             
-            // Show loading state
+            // Handle navigation based on action type
+            if (actionText === 'Konsultasi') {
+                // Navigate to konsultasi page
+                this.querySelector('span').textContent = 'Loading...';
+                this.style.opacity = '0.7';
+                
+                setTimeout(() => {
+                    // Add page transition effect
+                    document.body.style.opacity = '0.8';
+                    document.body.style.transform = 'translateX(20px)';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'konsul.html';
+                    }, 300);
+                }, 500);
+                
+                return;
+            } else if (actionText === 'Tes Psikologi') {
+                // Navigate to tes psikologi page
+                this.querySelector('span').textContent = 'Loading...';
+                this.style.opacity = '0.7';
+                
+                setTimeout(() => {
+                    // Add page transition effect
+                    document.body.style.opacity = '0.8';
+                    document.body.style.transform = 'translateX(20px)';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'tes-psikologi.html';
+                    }, 300);
+                }, 500);
+                
+                return;
+            }
+            
+            // Show loading state for other actions
             const originalText = this.querySelector('span').textContent;
             this.querySelector('span').textContent = 'Loading...';
             this.style.opacity = '0.7';
@@ -199,6 +234,62 @@ function animateWelcomeCard() {
         this.style.transform = 'scale(1) rotate(0deg)';
     });
 }
+
+// Global navigation functions
+function navigateToKonsul() {
+    showToast('Menuju halaman konsultasi...', 'info');
+    setTimeout(() => {
+        window.location.href = 'konsul.html';
+    }, 500);
+}
+
+function navigateToTesPsikologi() {
+    showToast('Menuju halaman tes psikologi...', 'info');
+    setTimeout(() => {
+        window.location.href = 'tes-psikologi.html';
+    }, 500);
+}
+
+// Navigation functions for specific pages
+function goToRiwayat() {
+    showToast('Membuka halaman riwayat...', 'info');
+    setTimeout(() => {
+        window.location.href = 'riwayat.html';
+    }, 500);
+}
+
+function goToProfil() {
+    showToast('Membuka halaman profil...', 'info');
+    setTimeout(() => {
+        window.location.href = 'profil.html';
+    }, 500);
+}
+
+function goToTesModal() {
+    showToast('Membuka tes psikologi...', 'info');
+    setTimeout(() => {
+        window.location.href = 'tes-psikologi.html';
+    }, 500);
+}
+
+// Add event listeners for navigation buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click handlers for bottom navigation
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (href && href !== '#') {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageName = href.replace('.html', '');
+                showToast(`Membuka halaman ${pageName}...`, 'info');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            });
+        }
+    });
+});
 
 // Utility Functions
 function getTimeBasedGreeting() {

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADAR - System Validation Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .test-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .test-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .test-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .test-link {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .test-link:hover {
+            background: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .status-ready { background: #22c55e; }
+        .status-warning { background: #f59e0b; }
+        .status-error { background: #ef4444; }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .keyboard-shortcut {
+            background: rgba(0, 0, 0, 0.3);
+            color: #fbbf24;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            margin: 0 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🩺 SADAR Mental Health App</h1>
+            <h2>System Validation & Testing Panel</h2>
+            <p>Comprehensive testing suite for all app features and functionality</p>
+        </div>
+        
+        <div class="test-grid">
+            <!-- Main Flow Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    🚀 Main Application Flow
+                </div>
+                <div class="test-description">
+                    Test the complete user journey from splash screen to dashboard and consultation features.
+                </div>
+                <div class="test-links">
+                    <a href="splash.html" class="test-link">🌟 Splash</a>
+                    <a href="login.html" class="test-link">🔐 Login</a>
+                    <a href="register.html" class="test-link">📝 Register</a>
+                    <a href="dashboard.html" class="test-link">🏠 Dashboard</a>
+                    <a href="konsul.html" class="test-link">💬 Konsultasi</a>
+                    <a href="tes-psikologi.html" class="test-link">🧠 Tes Psikologi</a>
+                    <a href="riwayat.html" class="test-link">📋 Riwayat</a>
+                    <a href="profil.html" class="test-link">👤 Profil</a>
+                </div>
+            </div>
+            
+            <!-- Psychology Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    🧠 Psychology Testing System
+                </div>
+                <div class="test-description">
+                    Test psychological assessment features including personality, intelligence, aptitude, mental health, and creativity tests.
+                </div>
+                <div class="test-links">
+                    <a href="tes-psikologi.html" class="test-link">🧠 Main Page</a>
+                    <span class="keyboard-shortcut">📝</span> 5 Test Types
+                    <span class="keyboard-shortcut">⏱️</span> Duration Info
+                    <span class="keyboard-shortcut">📊</span> Results History
+                </div>
+            </div>
+            
+            <!-- History & Profile Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    📋 History & Profile Management
+                </div>
+                <div class="test-description">
+                    Test user profile management, consultation history, test results tracking, and account settings.
+                </div>
+                <div class="test-links">
+                    <a href="riwayat.html" class="test-link">📋 Riwayat</a>
+                    <a href="profil.html" class="test-link">👤 Profil</a>
+                    <span class="keyboard-shortcut">📊</span> Statistics
+                    <span class="keyboard-shortcut">⚙️</span> Settings
+                </div>
+            </div>
+            
+            <!-- Doctor Booking Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    📅 Doctor Booking System
+                </div>
+                <div class="test-description">
+                    Test appointment booking functionality with different doctors, time slots, and form validation.
+                </div>
+                <div class="test-links">
+                    <a href="booking-ani.html" class="test-link">👩‍⚕️ Dr. Ani</a>
+                    <a href="booking-rahma.html" class="test-link">👩‍⚕️ Dr. Rahma</a>
+                    <a href="booking-hanna.html" class="test-link">👩‍⚕️ Dr. Hanna</a>
+                </div>
+            </div>
+            
+            <!-- Chat System Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    💬 Chat Communication
+                </div>
+                <div class="test-description">
+                    Test real-time chat interface with doctors, message sending, emoji support, and responsive design.
+                </div>
+                <div class="test-links">
+                    <a href="chat-ani.html" class="test-link">💬 Chat Dr. Ani</a>
+                    <a href="chat-rahma.html" class="test-link">💬 Chat Dr. Rahma</a>
+                    <a href="chat-hanna.html" class="test-link">💬 Chat Dr. Hanna</a>
+                </div>
+            </div>
+            
+            <!-- Video Call Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    📹 Video Consultation
+                </div>
+                <div class="test-description">
+                    Test video call interface with camera controls, call timer, and picture-in-picture functionality.
+                </div>
+                <div class="test-links">
+                    <a href="videocall-ani.html" class="test-link">📹 Call Dr. Ani</a>
+                    <a href="videocall-rahma.html" class="test-link">📹 Call Dr. Rahma</a>
+                    <a href="videocall-hanna.html" class="test-link">📹 Call Dr. Hanna</a>
+                </div>
+            </div>
+            
+            <!-- Theme & UI Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    🎨 Theme & Responsive Design
+                </div>
+                <div class="test-description">
+                    Test dark/light theme toggle, glassmorphism effects, animations, and responsive behavior across devices.
+                </div>
+                <div class="test-links">
+                    <span class="keyboard-shortcut">T</span> Theme Toggle
+                    <span class="keyboard-shortcut">👁️</span> Eye Icon
+                    <span class="keyboard-shortcut">📱</span> Mobile Test
+                </div>
+            </div>
+            
+            <!-- Navigation Test -->
+            <div class="test-card">
+                <div class="test-title">
+                    <span class="status-indicator status-ready"></span>
+                    🧭 Navigation & Flow
+                </div>
+                <div class="test-description">
+                    Test navigation between pages, bottom navigation bar, and inter-page communication.
+                </div>
+                <div class="test-links">
+                    <a href="navigation.html" class="test-link">🧭 Navigation Hub</a>
+                    <a href="konsul.html" class="test-link">📋 Dynamic Actions</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <strong>Responsive Design</strong><br>
+                Mobile-first approach with adaptive layouts
+            </div>
+            
+            <div class="feature-item">
+                <span class="feature-icon">🌙</span>
+                <strong>Dark/Light Theme</strong><br>
+                Seamless theme switching with persistence
+            </div>
+            
+            <div class="feature-item">
+                <span class="feature-icon">✨</span>
+                <strong>Glassmorphism UI</strong><br>
+                Modern glass-like effects and animations
+            </div>
+            
+            <div class="feature-item">
+                <span class="feature-icon">🔄</span>
+                <strong>Dynamic Navigation</strong><br>
+                Context-aware page transitions
+            </div>
+            
+            <div class="feature-item">
+                <span class="feature-icon">📱</span>
+                <strong>Mobile Optimized</strong><br>
+                Touch-friendly interface and controls
+            </div>
+            
+            <div class="feature-item">
+                <span class="feature-icon">🚀</span>
+                <strong>Performance</strong><br>
+                Optimized loading and smooth animations
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">
+            <p>🏥 SADAR Mental Health Application</p>
+            <p>Complete web-based platform for mental health consultation and support</p>
+            <p style="margin-top: 1rem;">
+                <strong>Testing Instructions:</strong> Start with splash.html, follow the main flow, then test individual features. 
+                Use <span class="keyboard-shortcut">T</span> key to toggle themes and test on multiple devices.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultasi - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/konsul.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="konsul-container">
+        <!-- Header -->
+        <header class="konsul-header glass-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                    </button>
+                    <h1 class="page-title">Pilih Konsultasi</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn">
+                        <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="konsul-main">
+            <!-- Mental Health Categories -->
+            <section class="categories-section">
+                <div class="categories-grid">
+                    <div class="category-item" data-category="depresi">
+                        <div class="category-icon">
+                            <img src="assets/Icon/depresi icon.png" alt="Depresi" class="category-img">
+                        </div>
+                        <span class="category-label">Depresi</span>
+                    </div>
+
+                    <div class="category-item" data-category="ptsd">
+                        <div class="category-icon">
+                            <img src="assets/Icon/tes psikologi icon.png" alt="PTSD" class="category-img">
+                        </div>
+                        <span class="category-label">PTSD</span>
+                    </div>
+
+                    <div class="category-item" data-category="bipolar">
+                        <div class="category-icon">
+                            <img src="assets/Icon/biopolar icon.png" alt="Bipolar" class="category-img">
+                        </div>
+                        <span class="category-label">Bipolar</span>
+                    </div>
+
+                    <div class="category-item" data-category="ocd">
+                        <div class="category-icon">
+                            <img src="assets/Icon/ocd icon.png" alt="OCD" class="category-img">
+                        </div>
+                        <span class="category-label">OCD</span>
+                    </div>
+
+                    <div class="category-item" data-category="anxiety">
+                        <div class="category-icon">
+                            <img src="assets/Icon/anxiety icon.png" alt="Anxiety" class="category-img">
+                        </div>
+                        <span class="category-label">Anxiety</span>
+                    </div>
+
+                    <div class="category-item" data-category="mental">
+                        <div class="category-icon">
+                            <img src="assets/Icon/mental icon.png" alt="Mental" class="category-img">
+                        </div>
+                        <span class="category-label">Mental</span>
+                    </div>
+
+                    <div class="category-item" data-category="love">
+                        <div class="category-icon">
+                            <img src="assets/Icon/love icon.png" alt="Love" class="category-img">
+                        </div>
+                        <span class="category-label">Love</span>
+                    </div>
+
+                    <div class="category-item" data-category="panic">
+                        <div class="category-icon">
+                            <img src="assets/Icon/panic icon.png" alt="Panic" class="category-img">
+                        </div>
+                        <span class="category-label">Panic</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Doctors List -->
+            <section class="doctors-section">
+                <div class="doctors-list">
+                    <!-- Doctor Card 1 -->
+                    <div class="doctor-card glass-card">
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">
+                                <img src="assets/Image/Dokter.png" alt="Dr. Ani" class="doctor-image">
+                            </div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Ani</h3>
+                                <div class="doctor-rating">
+                                    <span class="rating-stars">⭐ 4.5</span>
+                                </div>
+                                <div class="doctor-availability">
+                                    <span class="license">License: (000)-00-03</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="action-btn booking-btn">
+                                <span>Booking</span>
+                            </button>
+                            <button class="action-btn chat-btn">
+                                <img src="assets/Icon/chat icon.png" alt="Chat" class="action-icon">
+                                <span>Chat</span>
+                            </button>
+                            <button class="action-btn video-btn">
+                                <img src="assets/Icon/video call icon.png" alt="Video Call" class="action-icon">
+                                <span>Video Call</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 2 -->
+                    <div class="doctor-card glass-card">
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">
+                                <img src="assets/Image/Dokter.png" alt="Dr. Rahma" class="doctor-image">
+                            </div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Rahma</h3>
+                                <div class="doctor-rating">
+                                    <span class="rating-stars">⭐ 4.3</span>
+                                </div>
+                                <div class="doctor-availability">
+                                    <span class="license">License: (000)-00-02</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="action-btn booking-btn">
+                                <span>Booking</span>
+                            </button>
+                            <button class="action-btn chat-btn">
+                                <img src="assets/Icon/chat icon.png" alt="Chat" class="action-icon">
+                                <span>Chat</span>
+                            </button>
+                            <button class="action-btn video-btn">
+                                <img src="assets/Icon/video call icon.png" alt="Video Call" class="action-icon">
+                                <span>Video Call</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 3 -->
+                    <div class="doctor-card glass-card">
+                        <div class="doctor-info">
+                            <div class="doctor-avatar">
+                                <img src="assets/Image/Dokter.png" alt="Dr. Hanna" class="doctor-image">
+                            </div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Hanna</h3>
+                                <div class="doctor-rating">
+                                    <span class="rating-stars">⭐ 4.5</span>
+                                </div>
+                                <div class="doctor-availability">
+                                    <span class="license">License: (000)-00-43</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="action-btn booking-btn">
+                                <span>Booking</span>
+                            </button>
+                            <button class="action-btn chat-btn">
+                                <img src="assets/Icon/chat icon.png" alt="Chat" class="action-icon">
+                                <span>Chat</span>
+                            </button>
+                            <button class="action-btn video-btn">
+                                <img src="assets/Icon/video call icon.png" alt="Video Call" class="action-icon">
+                                <span>Video Call</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item active">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/konsul.js"></script>
+</body>
+</html>

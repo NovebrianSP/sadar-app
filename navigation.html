@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADAR - Mental Health App Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4, #f8fafc);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3b82f6;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .nav-item {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-item:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .nav-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .booking-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .booking-title {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+        
+        .booking-item {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .booking-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .doctor-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .doctor-spec {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .booking-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            SADAR
+        </div>
+        
+        <h1>SADAR Mental Health</h1>
+        <p class="subtitle">Platform Kesehatan Mental Terpercaya</p>
+        
+        <div class="nav-grid">
+            <a href="splash.html" class="nav-item">
+                <div class="nav-icon">🌟</div>
+                <div class="nav-title">Splash</div>
+                <div class="nav-desc">Halaman pembuka</div>
+            </a>
+            
+            <a href="login.html" class="nav-item">
+                <div class="nav-icon">🔐</div>
+                <div class="nav-title">Login</div>
+                <div class="nav-desc">Masuk ke akun</div>
+            </a>
+            
+            <a href="register.html" class="nav-item">
+                <div class="nav-icon">📝</div>
+                <div class="nav-title">Register</div>
+                <div class="nav-desc">Daftar akun baru</div>
+            </a>
+            
+            <a href="dashboard.html" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-title">Dashboard</div>
+                <div class="nav-desc">Halaman utama</div>
+            </a>
+            
+            <a href="konsul.html" class="nav-item">
+                <div class="nav-icon">💬</div>
+                <div class="nav-title">Konsultasi</div>
+                <div class="nav-desc">Chat dengan dokter</div>
+            </a>
+            
+            <a href="tes-psikologi.html" class="nav-item">
+                <div class="nav-icon">🧠</div>
+                <div class="nav-title">Tes Psikologi</div>
+                <div class="nav-desc">Tes kepribadian & mental</div>
+            </a>
+            
+            <a href="riwayat.html" class="nav-item">
+                <div class="nav-icon">📋</div>
+                <div class="nav-title">Riwayat</div>
+                <div class="nav-desc">Riwayat konsultasi & tes</div>
+            </a>
+            
+            <a href="profil.html" class="nav-item">
+                <div class="nav-icon">👤</div>
+                <div class="nav-title">Profil</div>
+                <div class="nav-desc">Pengaturan akun</div>
+            </a>
+        </div>
+        
+        <div class="booking-section">
+            <h3 class="booking-title">Halaman Booking Dokter</h3>
+            <div class="booking-grid">
+                <a href="booking-ani.html" class="booking-item">
+                    <div class="doctor-name">Dr. Ani Sulistyani</div>
+                    <div class="doctor-spec">Yogyakarta • ⭐ 4.9</div>
+                </a>
+                
+                <a href="booking-rahma.html" class="booking-item">
+                    <div class="doctor-name">Dr. Rahma Sari</div>
+                    <div class="doctor-spec">Jakarta • ⭐ 4.8</div>
+                </a>
+                
+                <a href="booking-hanna.html" class="booking-item">
+                    <div class="doctor-name">Dr. Hanna Putri</div>
+                    <div class="doctor-spec">Bandung • ⭐ 4.7</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

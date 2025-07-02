@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Dr. Ani Sulistyani - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <header class="chat-header glass-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                    </button>
+                    <div class="doctor-header-info">
+                        <h1 class="doctor-name">dr Ani Sulistyani</h1>
+                        <span class="online-status">Online</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="call-btn" onclick="startVideoCall('ani')">
+                        <img src="assets/Icon/video call icon.png" alt="Video Call" class="call-icon">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Messages -->
+        <main class="chat-main">
+            <div class="messages-container" id="messagesContainer">
+                <!-- Selamat datang message -->
+                <div class="message received">
+                    <div class="message-content">
+                        <p>Selamat pagi! Ada yang bisa saya bantu hari ini?</p>
+                        <span class="message-time">09:41</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>Saya ingin berkonsultasi tentang masalah kecemasan yang saya alami</p>
+                        <span class="message-time">09:42</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <div class="message-content">
+                        <p>Baik, bisa ceritakan lebih detail mengenai kecemasan yang Anda rasakan?</p>
+                        <span class="message-time">09:42</span>
+                    </div>
+                </div>
+
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>Saya sering merasa cemas berlebihan ketika menghadapi situasi baru atau meeting penting</p>
+                        <span class="message-time">09:43</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <div class="message-content">
+                        <p>Saya memahami. Kecemasan seperti itu cukup umum terjadi. Mari kita bahas teknik-teknik yang bisa membantu Anda mengatasinya.</p>
+                        <span class="message-time">09:44</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container glass-card">
+            <div class="input-wrapper">
+                <button class="emoji-btn" onclick="toggleEmojiPicker()">
+                    <span>😊</span>
+                </button>
+                <input type="text" id="messageInput" placeholder="Ketik pesan..." class="message-input">
+                <button class="attachment-btn" onclick="attachFile()">
+                    <img src="assets/Icon/foto icon.png" alt="Attach" class="attachment-icon">
+                </button>
+                <button class="send-btn" onclick="sendMessage()">
+                    <img src="assets/Icon/mic icon.png" alt="Send" class="send-icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- Emoji Picker -->
+        <div class="emoji-picker" id="emojiPicker">
+            <div class="emoji-grid">
+                <span class="emoji-item" onclick="insertEmoji('😊')">😊</span>
+                <span class="emoji-item" onclick="insertEmoji('😢')">😢</span>
+                <span class="emoji-item" onclick="insertEmoji('😰')">😰</span>
+                <span class="emoji-item" onclick="insertEmoji('🙏')">🙏</span>
+                <span class="emoji-item" onclick="insertEmoji('💙')">💙</span>
+                <span class="emoji-item" onclick="insertEmoji('✨')">✨</span>
+                <span class="emoji-item" onclick="insertEmoji('👍')">👍</span>
+                <span class="emoji-item" onclick="insertEmoji('❤️')">❤️</span>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item active">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container" id="themeToggleContainer">
+            <button id="themeToggle" class="theme-toggle-btn" onclick="toggleTheme()">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button id="toggleVisibility" class="visibility-toggle-btn" onclick="toggleThemeVisibility()">
+                <span class="visibility-icon">👁️</span>
+            </button>
+        </div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+</html>

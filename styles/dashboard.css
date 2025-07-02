@@ -1068,3 +1068,64 @@ body {
         transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
     }
 }
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem;
+    background: var(--bg-glass);
+    backdrop-filter: var(--backdrop-blur);
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: var(--transition);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-small);
+    position: relative;
+    min-width: 60px;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+    background: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+    background: var(--bg-glass);
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Add bottom padding to main content to account for bottom nav */
+.dashboard-main {
+    padding-bottom: 5rem;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Psikologi - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/tes-psikologi.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="tes-container">
+        <!-- Background Particles -->
+        <div class="tes-particles">
+            <div class="tes-particle"></div>
+            <div class="tes-particle"></div>
+            <div class="tes-particle"></div>
+            <div class="tes-particle"></div>
+            <div class="tes-particle"></div>
+        </div>
+        
+        <!-- Header -->
+        <header class="tes-header glass-header">
+            <div class="header-content">
+                <button class="back-btn magnetic ripple" onclick="goBack()">
+                    <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                </button>
+                <h1 class="page-title text-shimmer">Pilih Tes Psikologi</h1>
+                <button class="notification-btn magnetic pulse-glow">
+                    <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="tes-main">
+            <div class="tes-content">
+                <div class="intro-section">
+                    <div class="intro-card glass-dashboard card-3d-dashboard card-entrance">
+                        <h2 class="intro-title">Kenali Diri Anda Lebih Dalam</h2>
+                        <p class="intro-description">Pilih tes psikologi yang sesuai dengan kebutuhan Anda untuk mendapatkan pemahaman yang lebih baik tentang kepribadian, kemampuan, dan kondisi mental Anda.</p>
+                    </div>
+                </div>
+
+                <div class="tests-grid">
+                    <!-- Test Item 1: Tes Kepribadian -->
+                    <div class="test-item glass-dashboard card-3d-dashboard magnetic card-entrance" data-test="kepribadian">
+                        <div class="test-icon-container">
+                            <img src="assets/Icon/tes kepribadian icon.png" alt="Tes Kepribadian" class="test-icon">
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Tes Kepribadian</h3>
+                            <p class="test-description">Temukan tipe kepribadian Anda dan cara berinteraksi dengan lingkungan</p>
+                            <div class="test-meta">
+                                <span class="test-duration">⏱️ 15-20 menit</span>
+                                <span class="test-questions">📝 25 pertanyaan</span>
+                            </div>
+                        </div>
+                        <button class="test-start-btn btn-enhanced ripple">
+                            <span>Mulai Tes</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <!-- Test Item 2: Tes Intelegensi -->
+                    <div class="test-item glass-dashboard card-3d-dashboard magnetic card-entrance" data-test="intelegensi">
+                        <div class="test-icon-container">
+                            <img src="assets/Icon/tes intelegensi icon.png" alt="Tes Intelegensi" class="test-icon">
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Tes Intelegensi</h3>
+                            <p class="test-description">Ukur kemampuan kognitif dan tingkat kecerdasan Anda</p>
+                            <div class="test-meta">
+                                <span class="test-duration">⏱️ 30-45 menit</span>
+                                <span class="test-questions">📝 40 pertanyaan</span>
+                            </div>
+                        </div>
+                        <button class="test-start-btn btn-enhanced ripple">
+                            <span>Mulai Tes</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <!-- Test Item 3: Tes Minat Bakat -->
+                    <div class="test-item glass-dashboard card-3d-dashboard magnetic card-entrance" data-test="minat-bakat">
+                        <div class="test-icon-container">
+                            <img src="assets/Icon/tes minat bakat icon.png" alt="Tes Minat Bakat" class="test-icon">
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Tes Minat Bakat</h3>
+                            <p class="test-description">Eksplorasi minat dan bakat untuk menentukan arah karir</p>
+                            <div class="test-meta">
+                                <span class="test-duration">⏱️ 20-25 menit</span>
+                                <span class="test-questions">📝 30 pertanyaan</span>
+                            </div>
+                        </div>
+                        <button class="test-start-btn btn-enhanced ripple">
+                            <span>Mulai Tes</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <!-- Test Item 4: Tes Kesehatan Mental -->
+                    <div class="test-item glass-dashboard card-3d-dashboard magnetic card-entrance" data-test="kesehatan">
+                        <div class="test-icon-container">
+                            <img src="assets/Icon/tes kesehatan icon.png" alt="Tes Kesehatan Mental" class="test-icon">
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Tes Kesehatan</h3>
+                            <p class="test-description">Evaluasi kondisi kesehatan mental dan tingkat stres Anda</p>
+                            <div class="test-meta">
+                                <span class="test-duration">⏱️ 10-15 menit</span>
+                                <span class="test-questions">📝 20 pertanyaan</span>
+                            </div>
+                        </div>
+                        <button class="test-start-btn btn-enhanced ripple">
+                            <span>Mulai Tes</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+
+                    <!-- Test Item 5: Tes Kreativitas -->
+                    <div class="test-item glass-dashboard card-3d-dashboard magnetic card-entrance" data-test="kreativitas">
+                        <div class="test-icon-container">
+                            <img src="assets/Icon/tes kreatifitas icon.png" alt="Tes Kreativitas" class="test-icon">
+                        </div>
+                        <div class="test-content">
+                            <h3 class="test-title">Tes Kreativitas</h3>
+                            <p class="test-description">Ukur tingkat kreativitas dan kemampuan berpikir inovatif</p>
+                            <div class="test-meta">
+                                <span class="test-duration">⏱️ 25-30 menit</span>
+                                <span class="test-questions">📝 35 pertanyaan</span>
+                            </div>
+                        </div>
+                        <button class="test-start-btn btn-enhanced ripple">
+                            <span>Mulai Tes</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Test History Section -->
+                <section class="history-section">
+                    <h3 class="section-title">Riwayat Tes Anda</h3>
+                    <div class="history-card glass-dashboard card-3d-dashboard card-entrance">
+                        <div class="history-content">
+                            <div class="history-item">
+                                <div class="history-info">
+                                    <h4 class="history-test">Tes Kepribadian</h4>
+                                    <p class="history-date">15 Januari 2025</p>
+                                </div>
+                                <div class="history-result">
+                                    <span class="result-badge">ENFP</span>
+                                    <button class="view-result-btn">Lihat Detail</button>
+                                </div>
+                            </div>
+                            
+                            <div class="history-item">
+                                <div class="history-info">
+                                    <h4 class="history-test">Tes Kesehatan Mental</h4>
+                                    <p class="history-date">10 Januari 2025</p>
+                                </div>
+                                <div class="history-result">
+                                    <span class="result-badge good">Sehat</span>
+                                    <button class="view-result-btn">Lihat Detail</button>
+                                </div>
+                            </div>
+                            
+                            <p class="history-empty" style="display: none;">Belum ada riwayat tes. Mulai tes pertama Anda!</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item active">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <span class="theme-icon">👁️</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/tes-psikologi.js"></script>
+</body>
+</html>

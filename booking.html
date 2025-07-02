@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Dr. Ani Sulistyani</title>
+    <link rel="stylesheet" href="styles/booking.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="booking-container">
+        <!-- Header -->
+        <header class="booking-header glass-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="back-btn" onclick="goBack()">
+                        <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                    </button>
+                    <h1 class="page-title">Booking</h1>
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn">
+                        <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="booking-main">
+            <!-- Doctor Profile Card -->
+            <section class="doctor-profile-section">
+                <div class="doctor-profile-card glass-card">
+                    <div class="doctor-photo-container">
+                        <img src="assets/Image/Dokter.png" alt="Dr. Ani Sulistyani" class="doctor-photo">
+                    </div>
+                    
+                    <div class="doctor-info-card">
+                        <div class="doctor-name-section">
+                            <h2 class="doctor-full-name">dr Ani Sulistyani</h2>
+                            <div class="doctor-badge">
+                                <span class="badge-text">IDI/20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="doctor-location">
+                            <img src="assets/Icon/location icon.png" alt="Location" class="location-icon">
+                            <span class="location-text">Yogyakarta</span>
+                        </div>
+                        
+                        <div class="doctor-rating">
+                            <span class="rating-stars">⭐ 4.9</span>
+                        </div>
+                        
+                        <div class="doctor-description">
+                            <h3 class="info-title">Information</h3>
+                            <p class="info-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Nunc imperdiet, velit non lacinia rutrum, augue felis 
+                                rhoncus felis, aliquet hendrerit risus magna eu tellus. 
+                                Curabitur congue vitae ipsum nec vestibulum. Nullam 
+                                lacinia est vel est lobortis commodo.
+                            </p>
+                        </div>
+                        
+                        <button class="primary-booking-btn" onclick="proceedToBooking()">
+                            Booking
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item active">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/booking.js"></script>
+</body>
+</html>

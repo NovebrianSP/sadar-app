@@ -45,7 +45,7 @@
                     <div class="welcome-content">
                         <div class="welcome-text">
                             <h2 class="greeting text-shimmer">Hi, Jumbo!</h2>
-                            <p class="status">Good Morning</p>
+                            <p class="status">User Type</p>
                             <span class="user-type">Student</span>
                         </div>
                         <div class="avatar-section">
@@ -59,11 +59,11 @@
             <section class="actions-section">
                 <h3 class="section-title">Quick Actions</h3>
                 <div class="quick-actions">
-                    <button class="action-btn consultation-btn btn-enhanced-dashboard ripple card-entrance">
+                    <button class="action-btn consultation-btn btn-enhanced-dashboard ripple card-entrance" onclick="navigateToKonsul()">
                         <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="action-icon">
                         <span>Konsultasi</span>
                     </button>
-                    <button class="action-btn psychology-btn btn-enhanced-dashboard ripple card-entrance">
+                    <button class="action-btn psychology-btn btn-enhanced-dashboard ripple card-entrance" onclick="navigateToTesPsikologi()">
                         <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="action-icon">
                         <span>Tes Psikologi</span>
                     </button>
@@ -132,12 +132,31 @@
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer class="dashboard-footer glass-dashboard">
-            <div class="footer-content">
-                <p>&copy; 2024 Sadar Mental Health Platform. All rights reserved.</p>
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item active">
+                    <img src="assets/Icon/home icon blue.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
             </div>
-        </footer>
+        </nav>
     </div>
 
     <script src="scripts/theme-manager.js"></script>

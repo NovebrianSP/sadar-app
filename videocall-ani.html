@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call - Dr. Ani Sulistyani - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/videocall.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="videocall-container">
+        <!-- Header -->
+        <header class="videocall-header">
+            <div class="header-content">
+                <button class="back-btn" onclick="goBack()">
+                    <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                </button>
+                <div class="call-info">
+                    <span class="call-duration" id="callDuration">00:05</span>
+                </div>
+                <div class="header-spacer"></div>
+            </div>
+        </header>
+
+        <!-- Video Area -->
+        <main class="video-main">
+            <!-- Doctor Video (Main) -->
+            <div class="doctor-video-container">
+                <div class="doctor-video">
+                    <img src="assets/Image/Dokter.png" alt="Dr. Ani Sulistyani" class="doctor-image">
+                    <div class="video-overlay">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Ani Sulistyani</h3>
+                            <span class="connection-status">Connected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Video (Picture in Picture) -->
+            <div class="user-video-container">
+                <div class="user-video">
+                    <div class="user-placeholder">
+                        <span class="user-initial">A</span>
+                    </div>
+                    <button class="switch-camera-btn" onclick="switchCamera()">
+                        <img src="assets/Icon/cam icon.png" alt="Switch Camera" class="switch-icon">
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Call Controls -->
+        <div class="call-controls glass-card">
+            <div class="controls-row">
+                <button class="control-btn camera-btn active" onclick="toggleCamera()" data-tooltip="Camera">
+                    <img src="assets/Icon/cam icon.png" alt="Camera" class="control-icon">
+                </button>
+                
+                <button class="control-btn mic-btn active" onclick="toggleMic()" data-tooltip="Microphone">
+                    <img src="assets/Icon/mic icon.png" alt="Microphone" class="control-icon">
+                </button>
+                
+                <button class="control-btn end-call-btn" onclick="endCall()" data-tooltip="End Call">
+                    <img src="assets/Icon/end call icon.png" alt="End Call" class="control-icon">
+                </button>
+                
+                <button class="control-btn speaker-btn" onclick="toggleSpeaker()" data-tooltip="Speaker">
+                    <span class="speaker-icon">🔊</span>
+                </button>
+                
+                <button class="control-btn chat-btn" onclick="openChat()" data-tooltip="Chat">
+                    <img src="assets/Icon/chat icon.png" alt="Chat" class="control-icon">
+                </button>
+            </div>
+        </div>
+
+        <!-- Call Status -->
+        <div class="call-status" id="callStatus">
+            <div class="status-indicator connecting">
+                <div class="pulse-dot"></div>
+                <span>Connecting...</span>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item active">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item">
+                    <img src="assets/Icon/profil icon grey.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container" id="themeToggleContainer">
+            <button id="themeToggle" class="theme-toggle-btn" onclick="toggleTheme()">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button id="toggleVisibility" class="visibility-toggle-btn" onclick="toggleThemeVisibility()">
+                <span class="visibility-icon">👁️</span>
+            </button>
+        </div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/videocall.js"></script>
+</body>
+</html>

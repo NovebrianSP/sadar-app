@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/profil.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
+</head>
+<body>
+    <div class="profil-container">
+        <!-- Background Particles -->
+        <div class="profil-particles">
+            <div class="profil-particle"></div>
+            <div class="profil-particle"></div>
+            <div class="profil-particle"></div>
+            <div class="profil-particle"></div>
+            <div class="profil-particle"></div>
+        </div>
+        
+        <!-- Header -->
+        <header class="profil-header glass-header">
+            <div class="header-content">
+                <button class="back-btn magnetic ripple" onclick="goBack()">
+                    <img src="assets/Icon/back icon.png" alt="Back" class="back-icon">
+                </button>
+                <h1 class="page-title text-shimmer">Profil</h1>
+                <button class="notification-btn magnetic pulse-glow">
+                    <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="profil-main">
+            <div class="profil-content">
+                <!-- Profile Info Section -->
+                <section class="profile-info-section">
+                    <div class="profile-card glass-dashboard card-3d-dashboard card-entrance">
+                        <div class="profile-header">
+                            <div class="avatar-container">
+                                <img src="assets/Image/jumbo.png" alt="Profile Avatar" class="profile-avatar magnetic">
+                                <button class="edit-avatar-btn">
+                                    <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon">
+                                </button>
+                            </div>
+                            <div class="profile-info">
+                                <h2 class="profile-name">Jumbo</h2>
+                                <p class="profile-email">jumbo@student.com</p>
+                                <span class="profile-status online">● Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Data Diri Section -->
+                <section class="data-diri-section">
+                    <h3 class="section-title">Data Diri</h3>
+                    <div class="data-card glass-dashboard card-3d-dashboard card-entrance">
+                        <div class="data-content">
+                            <div class="data-group">
+                                <div class="data-item">
+                                    <label class="data-label">Nama</label>
+                                    <div class="data-value">
+                                        <span class="value-text">Jumbo</span>
+                                        <button class="edit-btn" data-field="name">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">Tanggal Lahir</label>
+                                    <div class="data-value">
+                                        <span class="value-text">15/01/2004</span>
+                                        <button class="edit-btn" data-field="birthdate">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">No. Telepon</label>
+                                    <div class="data-value">
+                                        <span class="value-text">089123456789</span>
+                                        <button class="edit-btn" data-field="phone">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">Alamat</label>
+                                    <div class="data-value">
+                                        <span class="value-text">Jl. Deisari Sleman Yogyakarta</span>
+                                        <button class="edit-btn" data-field="address">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">Jenis Kelamin</label>
+                                    <div class="data-value">
+                                        <span class="value-text">Laki-laki</span>
+                                        <button class="edit-btn" data-field="gender">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">Agama</label>
+                                    <div class="data-value">
+                                        <span class="value-text">Islam</span>
+                                        <button class="edit-btn" data-field="religion">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="data-item">
+                                    <label class="data-label">Pekerjaan</label>
+                                    <div class="data-value">
+                                        <span class="value-text">Pelajar</span>
+                                        <button class="edit-btn" data-field="occupation">
+                                            <img src="assets/Icon/edit icon.png" alt="Edit" class="edit-icon-small">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Account Settings Section -->
+                <section class="settings-section">
+                    <h3 class="section-title">Pengaturan Akun</h3>
+                    <div class="settings-card glass-dashboard card-3d-dashboard card-entrance">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4 class="setting-title">Ubah Password</h4>
+                                <p class="setting-desc">Ganti password untuk keamanan akun</p>
+                            </div>
+                            <button class="setting-btn">
+                                <img src="assets/Icon/edit icon.png" alt="Change" class="setting-icon">
+                            </button>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4 class="setting-title">Notifikasi</h4>
+                                <p class="setting-desc">Atur preferensi notifikasi</p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="notifications" checked>
+                                <label for="notifications" class="toggle-label"></label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4 class="setting-title">Mode Gelap</h4>
+                                <p class="setting-desc">Beralih ke tema gelap</p>
+                            </div>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="dark-mode">
+                                <label for="dark-mode" class="toggle-label"></label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4 class="setting-title">Bahasa</h4>
+                                <p class="setting-desc">Pilih bahasa aplikasi</p>
+                            </div>
+                            <select class="language-select">
+                                <option value="id">Bahasa Indonesia</option>
+                                <option value="en">English</option>
+                                <option value="ar">العربية</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Action Buttons Section -->
+                <section class="actions-section">
+                    <div class="action-buttons">
+                        <button class="action-btn save-btn btn-enhanced-dashboard ripple">
+                            <span>Simpan Perubahan</span>
+                        </button>
+                        <button class="action-btn logout-btn btn-enhanced-dashboard ripple" onclick="logout()">
+                            <img src="assets/Icon/log out icon.png" alt="Logout" class="logout-icon">
+                            <span>Keluar</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- App Info Section -->
+                <section class="app-info-section">
+                    <div class="app-info-card glass-dashboard card-3d-dashboard card-entrance">
+                        <div class="app-info-content">
+                            <h4 class="app-title">SADAR Mental Health</h4>
+                            <p class="app-version">Versi 1.0.0</p>
+                            <p class="app-description">Platform kesehatan mental untuk konsultasi dan tes psikologi</p>
+                            <div class="app-links">
+                                <a href="#" class="app-link">Kebijakan Privasi</a>
+                                <a href="#" class="app-link">Syarat & Ketentuan</a>
+                                <a href="#" class="app-link">Bantuan</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav glass-dashboard">
+            <div class="nav-items">
+                <a href="dashboard.html" class="nav-item">
+                    <img src="assets/Icon/home icon grey.png" alt="Home" class="nav-icon">
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="konsul.html" class="nav-item">
+                    <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="nav-icon">
+                    <span class="nav-label">Konsultasi</span>
+                </a>
+                <a href="tes-psikologi.html" class="nav-item">
+                    <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="nav-icon">
+                    <span class="nav-label">Tes</span>
+                </a>
+                <a href="riwayat.html" class="nav-item">
+                    <img src="assets/Icon/riwayat icon.png" alt="Riwayat" class="nav-icon">
+                    <span class="nav-label">Riwayat</span>
+                </a>
+                <a href="profil.html" class="nav-item active">
+                    <img src="assets/Icon/profil icon blue.png" alt="Profil" class="nav-icon">
+                    <span class="nav-label">Profil</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <span class="theme-icon">👁️</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="edit-modal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content glass-dashboard">
+            <div class="modal-header">
+                <h3 id="modal-title">Edit Data</h3>
+                <button class="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-form">
+                    <div class="form-group">
+                        <label id="field-label" for="field-input">Field</label>
+                        <input type="text" id="field-input" class="form-input" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel">Batal</button>
+                <button type="submit" form="edit-form" class="btn-save">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/theme-manager.js"></script>
+    <script src="scripts/profil.js"></script>
+</body>
+</html>
