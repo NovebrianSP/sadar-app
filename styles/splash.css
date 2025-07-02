@@ -428,3 +428,67 @@ body {
         width: 150px;
     }
 }
+
+/* Mobile Performance Optimizations - Reduced Animations */
+@media (max-width: 768px) {
+    /* Disable complex background animations */
+    .circle {
+        display: none;
+    }
+    
+    .floating-circles {
+        display: none;
+    }
+    
+    /* Simplify logo animations */
+    .logo-wrapper {
+        animation: none;
+    }
+    
+    .logo-pulse {
+        display: none;
+    }
+    
+    .splash-logo {
+        filter: none;
+    }
+    
+    /* Reduce content animations */
+    .splash-content {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .tagline-container {
+        animation: none;
+    }
+    
+    .features-preview {
+        animation: none;
+    }
+    
+    /* Simplify loading animations */
+    .loading-bar {
+        animation-duration: 2s;
+    }
+    
+    .dots span {
+        animation-duration: 1s;
+    }
+    
+    /* Remove text effects */
+    .logo-text {
+        background: var(--text-white);
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-clip: initial;
+        text-shadow: none;
+        color: var(--text-white);
+    }
+    
+    /* Reduce transitions */
+    body {
+        transition: background-color 0.2s ease;
+    }
+}

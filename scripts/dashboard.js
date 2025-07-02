@@ -2,12 +2,18 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🏠 Dashboard loaded successfully!');
+    console.log('💡 Theme Toggle Controls (Bottom-right):');
+    console.log('   - Single click: Toggle theme');
+    console.log('   - Double click: Hide/Show theme toggle');
+    console.log('   - Keyboard: Ctrl+Shift+T (toggle), Ctrl+Shift+H (hide/show)');
+    console.log('   - Mobile: Smaller size for better mobile experience');
     
     // Initialize dashboard components
     initializeNavigation();
     initializeMenuItems();
     initializeQuickActions();
     initializeNotifications();
+    initializeArticles();
     
     // Add welcome animation
     animateWelcomeCard();
@@ -114,6 +120,53 @@ function initializeNotifications() {
         
         showToast('No new notifications', 'info');
         console.log('Notification button clicked');
+    });
+}
+
+// Articles Functions
+function initializeArticles() {
+    const articleCards = document.querySelectorAll('.article-card');
+    
+    articleCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const articleTitle = this.querySelector('.article-title').textContent;
+            
+            // Add click animation (mobile-friendly)
+            if (window.innerWidth > 768) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            }
+            
+            // Show loading state
+            this.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                this.style.opacity = '1';
+                showToast(`Opening article: ${articleTitle}`, 'success');
+                console.log(`Article clicked: ${articleTitle}`);
+                
+                // Here you can add navigation to article detail page
+                // For now, we'll just show a message
+                setTimeout(() => {
+                    showToast('Article detail page coming soon!', 'info');
+                }, 500);
+            }, 600);
+        });
+        
+        // Add hover effect for desktop only
+        if (window.innerWidth > 768) {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderColor = 'var(--primary-color)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderColor = '';
+                this.style.boxShadow = '';
+            });
+        }
     });
 }
 

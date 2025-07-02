@@ -83,7 +83,7 @@ body {
     }
 }
 
-.register-container {
+.login-container {
     background: var(--bg-secondary);
     border-radius: 20px;
     box-shadow: 0 20px 40px var(--shadow-light);
@@ -201,7 +201,7 @@ body {
     color: var(--text-tertiary);
 }
 
-.signup-btn {
+.signin-btn {
     width: 100%;
     padding: 15px;
     background: var(--accent-primary);
@@ -215,7 +215,7 @@ body {
     margin: 30px 0;
 }
 
-.signup-btn:hover {
+.signin-btn:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px var(--shadow-medium);
@@ -280,12 +280,12 @@ body {
     z-index: 1;
 }
 
-.login-link {
+.register-link {
     color: var(--text-secondary);
     font-size: 14px;
 }
 
-.login-link a {
+.register-link a {
     color: var(--accent-primary);
     text-decoration: none;
     font-weight: 600;
@@ -293,11 +293,11 @@ body {
     overflow: hidden;
 }
 
-.login-link a:hover {
+.register-link a:hover {
     text-decoration: underline;
 }
 
-.login-link a::after {
+.register-link a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -308,17 +308,17 @@ body {
     transition: width 0.3s ease;
 }
 
-.login-link a:hover::after {
+.register-link a:hover::after {
     width: 100%;
 }
 
 /* Loading Spinner for Button */
-.signup-btn.loading {
+.signin-btn.loading {
     position: relative;
     pointer-events: none;
 }
 
-.signup-btn.loading::after {
+.signin-btn.loading::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -337,12 +337,12 @@ body {
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-.signup-btn.loading span {
+.signin-btn.loading span {
     opacity: 0;
 }
 
 @media (max-width: 480px) {
-    .register-container {
+    .login-container {
         margin: 20px;
         padding: 40px 30px;
     }
@@ -358,65 +358,5 @@ body {
     .social-btn {
         width: 50px;
         height: 50px;
-    }
-}
-
-/* Mobile Performance Optimizations - Reduced Animations */
-@media (max-width: 768px) {
-    /* Reduce animation complexity */
-    body {
-        animation: none;
-        opacity: 1;
-        transform: none;
-    }
-    
-    .register-container {
-        animation: none;
-        transform: none;
-        opacity: 1;
-        backdrop-filter: blur(5px);
-        box-shadow: 0 10px 20px var(--shadow-light);
-    }
-    
-    .logo {
-        animation: none;
-        text-shadow: none;
-    }
-    
-    .subtitle {
-        animation: none;
-    }
-    
-    /* Simplify button animations */
-    .signup-btn:hover {
-        transform: none;
-        box-shadow: 0 4px 10px var(--shadow-medium);
-    }
-    
-    .social-btn:hover {
-        transform: none;
-        box-shadow: 0 2px 8px var(--shadow-light);
-    }
-    
-    .social-btn::before {
-        display: none;
-    }
-    
-    /* Reduce input animations */
-    .form-input:focus {
-        animation: none;
-        transform: none;
-        box-shadow: 0 0 0 2px var(--glass-bg);
-    }
-    
-    /* Simplify transitions */
-    .form-input,
-    .signup-btn,
-    .social-btn {
-        transition: background-color 0.2s ease, border-color 0.2s ease;
-    }
-    
-    .login-link a::after {
-        display: none;
     }
 }
