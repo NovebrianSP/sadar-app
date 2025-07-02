@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sadar Mental Health</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Dashboard Particles -->
+        <div class="dashboard-particles">
+            <div class="dashboard-particle"></div>
+            <div class="dashboard-particle"></div>
+            <div class="dashboard-particle"></div>
+            <div class="dashboard-particle"></div>
+            <div class="dashboard-particle"></div>
+        </div>
+        
+        <!-- Header -->
+        <header class="dashboard-header glass-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="assets/Logo/sadar_biru.png" alt="Sadar Logo" class="header-logo">
+                    <h1 class="app-title text-shimmer">sadar</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn magnetic pulse-glow">
+                        <img src="assets/Icon/notification icon.png" alt="Notifications" class="notification-icon">
+                    </button>
+                    <button class="logout-btn btn-enhanced-dashboard ripple" onclick="logout()">
+                        <img src="assets/Icon/log out icon.png" alt="Logout" class="logout-icon">
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-card glass-dashboard card-3d-dashboard card-entrance">
+                    <div class="welcome-content">
+                        <div class="welcome-text">
+                            <h2 class="greeting text-shimmer">Hi, Jumbo!</h2>
+                            <p class="status">Good Morning</p>
+                            <span class="user-type">Student</span>
+                        </div>
+                        <div class="avatar-section">
+                            <img src="assets/Image/Dokter.png" alt="User Avatar" class="user-avatar magnetic">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions Section -->
+            <section class="actions-section">
+                <h3 class="section-title">Quick Actions</h3>
+                <div class="quick-actions">
+                    <button class="action-btn consultation-btn btn-enhanced-dashboard ripple card-entrance">
+                        <img src="assets/Icon/konsultasi icon.png" alt="Konsultasi" class="action-icon">
+                        <span>Konsultasi</span>
+                    </button>
+                    <button class="action-btn psychology-btn btn-enhanced-dashboard ripple card-entrance">
+                        <img src="assets/Icon/tes psikologi icon.png" alt="Tes Psikologi" class="action-icon">
+                        <span>Tes Psikologi</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Mental Health Tests Section -->
+            <section class="tests-section">
+                <h3 class="section-title">Mental Health Tests</h3>
+                <div class="menu-grid">
+                    <div class="menu-card glass-dashboard card-3d-dashboard magnetic card-entrance">
+                        <img src="assets/Icon/tes kepribadian icon.png" alt="Tes Kepribadian" class="menu-icon">
+                        <h4 class="menu-title">Tes Kepribadian</h4>
+                        <p class="menu-description">Mengetahui tipe kepribadian Anda</p>
+                    </div>
+
+                    <div class="menu-card glass-dashboard card-3d-dashboard magnetic card-entrance">
+                        <img src="assets/Icon/tes intelegensi icon.png" alt="Tes Intelegensi" class="menu-icon">
+                        <h4 class="menu-title">Tes Intelegensi</h4>
+                        <p class="menu-description">Mengukur tingkat kecerdasan</p>
+                    </div>
+
+                    <div class="menu-card glass-dashboard card-3d-dashboard magnetic card-entrance">
+                        <img src="assets/Icon/tes minat bakat icon.png" alt="Tes Minat & Bakat" class="menu-icon">
+                        <h4 class="menu-title">Tes Minat & Bakat</h4>
+                        <p class="menu-description">Menemukan minat dan bakat Anda</p>
+                    </div>
+
+                    <div class="menu-card glass-dashboard card-3d-dashboard magnetic card-entrance">
+                        <img src="assets/Icon/tes kreatifitas icon.png" alt="Tes Kreativitas" class="menu-icon">
+                        <h4 class="menu-title">Tes Kreativitas</h4>
+                        <p class="menu-description">Mengukur tingkat kreativitas</p>
+                    </div>
+
+                    <div class="menu-card glass-dashboard card-3d-dashboard magnetic card-entrance">
+                        <img src="assets/Icon/tes kesehatan icon.png" alt="Tes Kesehatan Mental" class="menu-icon">
+                        <h4 class="menu-title">Tes Kesehatan Mental</h4>
+                        <p class="menu-description">Evaluasi kondisi mental Anda</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer glass-dashboard">
+            <div class="footer-content">
+                <p>&copy; 2024 Sadar Mental Health Platform. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Floating Action Button -->
+        <div class="fab magnetic">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

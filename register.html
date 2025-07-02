@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADAR - Register</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="logo">sadar</div>
+        <div class="subtitle">Create to your Account</div>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Username" id="username">
+            </div>
+            
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Email" id="email">
+            </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Password" id="password">
+            </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-input" placeholder="Confirm password" id="confirmPassword">
+            </div>
+            
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        
+        <div class="divider">or sign up with</div>
+        
+        <div class="social-login">
+            <div class="social-btn">
+                <img src="assets/google_icon.svg" alt="Google" onerror="this.style.display='none'">
+            </div>
+            <div class="social-btn">
+                <img src="assets/facebook_icon.svg" alt="Facebook" onerror="this.style.display='none'">
+            </div>
+            <div class="social-btn">
+                <img src="assets/apple_icon.svg" alt="Apple" onerror="this.style.display='none'">
+            </div>
+        </div>
+        
+        <div class="login-link">
+            Already have an account? <a href="login.html">Sign in</a>
+        </div>
+    </div>
+
+    <script src="scripts/register.js"></script>
+</body>
+</html>
