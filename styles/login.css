@@ -1,3 +1,42 @@
+/* Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --border-color: #e1e8ed;
+    --input-bg: #f8f9fa;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+    --accent-primary: #4285f4;
+    --accent-hover: #3367d6;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Theme Colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --text-tertiary: #888888;
+        --border-color: #404040;
+        --input-bg: #3a3a3a;
+        --shadow-light: rgba(0, 0, 0, 0.3);
+        --shadow-medium: rgba(0, 0, 0, 0.5);
+        --shadow-heavy: rgba(0, 0, 0, 0.7);
+        --accent-primary: #5a9fd4;
+        --accent-hover: #4a8bc2;
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +45,15 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--bg-primary);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     animation: pageEnter 0.8s ease-out forwards;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
 }
 
 /* Page Animation */
@@ -43,9 +84,9 @@ body {
 }
 
 .login-container {
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px var(--shadow-light);
     padding: 60px 50px;
     width: 100%;
     max-width: 450px;
@@ -53,6 +94,8 @@ body {
     transform: translateY(20px);
     opacity: 0;
     animation: containerSlideIn 1s ease-out 0.3s forwards;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
 }
 
 /* Container Animation */
@@ -85,7 +128,7 @@ body {
 .logo {
     font-size: 36px;
     font-weight: bold;
-    color: #4285f4;
+    color: var(--accent-primary);
     margin-bottom: 10px;
     letter-spacing: 2px;
     animation: logoGlow 2s ease-in-out infinite alternate;
@@ -93,15 +136,15 @@ body {
 
 @keyframes logoGlow {
     from {
-        text-shadow: 0 0 5px rgba(66, 133, 244, 0.3);
+        text-shadow: 0 0 5px var(--glass-bg);
     }
     to {
-        text-shadow: 0 0 20px rgba(66, 133, 244, 0.6), 0 0 30px rgba(66, 133, 244, 0.4);
+        text-shadow: 0 0 20px var(--accent-primary), 0 0 30px var(--glass-bg);
     }
 }
 
 .subtitle {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 16px;
     margin-bottom: 40px;
     animation: subtitleSlide 1s ease-out 0.5s both;
@@ -126,32 +169,22 @@ body {
 .form-input {
     width: 100%;
     padding: 15px 20px;
-    border: 2px solid #e1e8ed;
+    border: 2px solid var(--border-color);
     border-radius: 12px;
     font-size: 16px;
     transition: all 0.3s ease;
-    background: #f8f9fa;
+    background: var(--input-bg);
+    color: var(--text-primary);
     position: relative;
     overflow: hidden;
 }
 
-.form-input::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(66, 133, 244, 0.1), transparent);
-    transition: left 0.6s ease;
-}
-
 .form-input:focus {
     outline: none;
-    border-color: #4285f4;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
-    /* Additional Animations */
+    border-color: var(--accent-primary);
+    background: var(--bg-secondary);
+    box-shadow: 0 0 0 3px var(--glass-bg);
+    color: var(--text-primary);
     animation: inputFocus 0.6s ease-out forwards;
 }
 
@@ -164,18 +197,14 @@ body {
     }
 }
 
-.form-input:focus::before {
-    left: 100%;
-}
-
 .form-input::placeholder {
-    color: #999;
+    color: var(--text-tertiary);
 }
 
 .signin-btn {
     width: 100%;
     padding: 15px;
-    background: #4285f4;
+    background: var(--accent-primary);
     color: white;
     border: none;
     border-radius: 12px;
@@ -187,9 +216,100 @@ body {
 }
 
 .signin-btn:hover {
-    background: #3367d6;
+    background: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(66, 133, 244, 0.3);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.divider {
+    margin: 30px 0;
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+.social-login {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--glass-bg);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.register-link {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.register-link a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.register-link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width 0.3s ease;
+}
+
+.register-link a:hover::after {
+    width: 100%;
 }
 
 /* Loading Spinner for Button */
@@ -221,98 +341,22 @@ body {
     opacity: 0;
 }
 
-.divider {
-    margin: 30px 0;
-    color: #999;
-    font-size: 14px;
-}
-
-.social-login {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.social-btn {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #e1e8ed;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.social-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(66, 133, 244, 0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-}
-
-.social-btn:hover {
-    border-color: #4285f4;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.social-btn:hover::before {
-    width: 100px;
-    height: 100px;
-}
-
-.social-btn img {
-    width: 24px;
-    height: 24px;
-}
-
-.register-link {
-    color: #666;
-    font-size: 14px;
-}
-
-.register-link a {
-    color: #4285f4;
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-}
-
-.register-link a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #4285f4;
-    transition: width 0.3s ease;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-.register-link a:hover::after {
-    width: 100%;
-}
-
 @media (max-width: 480px) {
     .login-container {
         margin: 20px;
         padding: 40px 30px;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .social-login {
+        gap: 10px;
+    }
+    
+    .social-btn {
+        width: 50px;
+        height: 50px;
     }
 }

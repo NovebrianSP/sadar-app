@@ -7,11 +7,13 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--bg-primary);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--text-white);
+    transition: all 0.3s ease;
 }
 
 .splash-container {
@@ -43,7 +45,7 @@ body {
 .circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--circle-bg);
     animation: float 6s ease-in-out infinite;
 }
 
@@ -103,7 +105,7 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: white;
+    color: var(--text-white);
     animation: fadeInUp 1s ease-out;
 }
 
@@ -141,11 +143,11 @@ body {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 3px;
-    background: linear-gradient(45deg, #ffffff, #e3f2fd);
+    background: linear-gradient(45deg, var(--text-white), var(--text-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 5px 15px var(--shadow-heavy);
 }
 
 .logo-pulse {
@@ -155,7 +157,7 @@ body {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--glass-border);
     border-radius: 50%;
     animation: pulse 2s ease-in-out infinite;
 }
@@ -217,7 +219,7 @@ body {
 .loading-bar {
     width: 200px;
     height: 4px;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--glass-bg);
     border-radius: 2px;
     margin: 0 auto 15px;
     overflow: hidden;
@@ -225,7 +227,7 @@ body {
 
 .loading-progress {
     height: 100%;
-    background: linear-gradient(90deg, #ffffff, #e3f2fd);
+    background: linear-gradient(90deg, var(--text-white), var(--text-light));
     border-radius: 2px;
     animation: loading 3s ease-in-out infinite;
 }
@@ -316,9 +318,9 @@ body {
     position: absolute;
     top: 40px;
     right: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-white);
     padding: 12px 20px;
     border-radius: 25px;
     font-size: 14px;
@@ -332,9 +334,9 @@ body {
 }
 
 .skip-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--glass-border);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px var(--shadow-medium);
 }
 
 .skip-btn svg {
@@ -343,6 +345,51 @@ body {
 
 .skip-btn:hover svg {
     transform: translateX(3px);
+}
+
+/* Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --border-color: #e1e8ed;
+    --input-bg: #f8f9fa;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+    --accent-primary: #4285f4;
+    --accent-hover: #3367d6;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --circle-bg: rgba(255, 255, 255, 0.1);
+    --text-white: #ffffff;
+    --text-light: #e3f2fd;
+}
+
+/* Dark Theme Colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --text-tertiary: #888888;
+        --border-color: #404040;
+        --input-bg: #3a3a3a;
+        --shadow-light: rgba(0, 0, 0, 0.3);
+        --shadow-medium: rgba(0, 0, 0, 0.5);
+        --shadow-heavy: rgba(0, 0, 0, 0.7);
+        --accent-primary: #5a9fd4;
+        --accent-hover: #4a8bc2;
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --circle-bg: rgba(255, 255, 255, 0.05);
+        --text-white: #ffffff;
+        --text-light: #b3d9ff;
+    }
 }
 
 /* Responsive Design */

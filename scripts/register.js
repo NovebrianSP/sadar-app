@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Add page transition animation before redirect
         setTimeout(() => {
-            animatePageTransition('index.html');
+            animatePageTransition('login.html');
         }, 1500);
     });
     
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (loginLink) {
         loginLink.addEventListener('click', function(e) {
             e.preventDefault();
-            animatePageTransition('index.html');
+            animatePageTransition('login.html');
         });
     }
 });
